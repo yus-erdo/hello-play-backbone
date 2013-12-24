@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a id="titleLink" class="brand" href="/"></a>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="container">
+		
+    </div>
+    <script type="text/template" id="message_content">
+        <div class="well">
+            <h1><%- value %></h1>
+        </div>
+
+        <button id="getMessageButton">Get JSON Message</button>
+    </script>
+    <script type="text/javascript" src="@routes.Assets.at("bower_components/jquery/jquery.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("bower_components/underscore/underscore.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("bower_components/backbone/backbone.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascript/index.js")"></script>
+</body>
+</html>
