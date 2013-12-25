@@ -2,12 +2,12 @@ var app = app || {};
 
 (function ($) {
 
-    var message = Backbone.Model.extend({
+    var Message = Backbone.Model.extend({
         urlRoot: "/message",
         defaults: { value: "Default Hello World" }        
     });
 
-    var messageView = Backbone.View.extend({
+    var MessageView = Backbone.View.extend({
 
       el: "#content",
 
@@ -28,14 +28,14 @@ var app = app || {};
 
       getMessage: function() {
         this.model.fetch({
-	        error: function (message) {
-	            console.log(message);
-	        }
+          error: function (message) {
+            console.log(message);
+          }
         });
       }
     });
 
-    var v = new messageView({ model: new message()});
+    var v = new MessageView({ model: new Message()});
     v.render();
 
 })(jQuery);

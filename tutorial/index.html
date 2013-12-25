@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>Akka  Spring-Scala - Activator Template</title>
+</head>
+<body>
+<div>
+  <h2>Introduction</h2>
+
+  <p>This tutorial aims to show you how to use backbone.js with play framework. 
+  </p>
+
+  <h2>Application Overview</h2>
+
+  <p>The application basically consist of a single view defined in the
+    <a href="#code/app/views/index.scala.html" class="shortcut">
+    app/views/index.scala.html</a>
+    file. This view uses backbone.js (and it's dependencies) which makes RESTful calls to 
+    <a href="#code/app/controllers/MessageController.scala" class="shortcut">app/controllers/MessageController.scala</a> 
+    controller.    
+  </p>
+  <h2>Note</h2>
+  <p> This template is inspired from the equivalent <a href="http://typesafe.com/activator/template/akka-java-spring"><strong>JAVA</strong></a> template </p>
+</div>
+<div>
+  <h2>Running the Application</h2>
+
+  <p>On the left-hand side we can
+    see the console output, which tells which port is used. Simply browse to given address. By default: 
+    
+    <a href="http://localhost:9000" class="shortcut"> http://localhost:9000 </a>
+    
+  </p>
+
+  <h2> Running the Test</h2>
+
+  <p>There is also a Specification test for the <code>CountingActor</code> located in
+    the <a href="#code/test/sample/SpringTest.scala" class="shortcut">
+    test/sample/SpringTest.scala</a> file. It is structured in the same way as
+    the <code>Main</code> application.
+  </p>
+
+  <p>The result of running the test is shown in the
+    <a href="#test" class="shortcut">Test</a> tab. On the left-hand side we can
+    see the console output.
+  </p>
+</div>
+<div>
+  <h2>Exploring the Code </h2>
+
+  <p>To be able to use the backbone.js  First we need to reference them in our main view
+   <a href="#code/app/views/index.scala.html" class="shortcut">
+    app/views/index.scala.html</a>. Inside this view we reference out javascript files using 
+    play framework asset management. jQuery and Underscore.js are dependencies.     
+  </p>
+
+  <p>And the BackboneJS components are inside <a href="#code/public/javascript/index.js" class="shortcut">index.js</a>
+  </p>
+
+  <p>Inside index.js there is Message model which represent the message coming from server.
+  There is MessageView which represents the view that will be rendered. The view simply handles the 
+  button clicks on "Get JSON Message" button and makes fetch call on Message model. And whenever a change happens on MessageModel 
+  a render is called for this view with the new model.
+  </p>
+
+ <p>
+ <a href="#code/app/controllers/MessageController.scala" class="shortcut">app/controllers/MessageController.scala</a> is the controller that 
+ responds to calls on /message for JSON message.
+ </p>
+</div>
+
+</body>
+</html>
